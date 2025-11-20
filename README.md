@@ -31,8 +31,10 @@ Derives exact velocity vectors using the Chain Rule:
 
 ## 📊 Results (Preview)
 
-![Velocity Graph](<img width="351" height="215" alt="image" src="https://github.com/user-attachments/assets/1e6e5121-b5c3-401a-902c-1c0c78ecaec6" />
-)
+<div align="center">
+  <img src="velocity_graph.png" width="80%" />
+  <p><em>Figure 1: Velocity Profile of the Needle Bar (Slider)</em></p>
+</div>
 
 > The graph demonstrates the **asymmetric velocity profile**, highlighting the quick-return motion essential for high-speed sewing operations.
 
