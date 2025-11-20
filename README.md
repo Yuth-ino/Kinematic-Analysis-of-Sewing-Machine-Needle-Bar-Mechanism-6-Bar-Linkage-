@@ -231,5 +231,8 @@ title('Needle Bar Velocity');
 
 fprintf('Max Needle Velocity: %.2f mm/s\n', max(vD_vals));
 ```
+
+</details>
+
 ---
 *Project by [Yuth Kanjanaprayut/6630276621]*
