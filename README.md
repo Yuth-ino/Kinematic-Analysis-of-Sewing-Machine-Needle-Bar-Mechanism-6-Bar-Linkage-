@@ -1,28 +1,37 @@
 # Kinematic Analysis of Sewing Machine Needle Bar Mechanism
 
-![MATLAB](https://img.shields.io/badge/Tools-MATLAB%20%7C%20Symbolic%20Math-blue)
+![MATLAB](https://img.shields.io/badge/Project-MATLAB%20Simscape-orange?style=for-the-badge&logo=matlab) ![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge)
 
-## Project Overview
-This project presents a computational kinematic analysis of a **6-bar linkage mechanism** utilized in industrial sewing machine needle bar drives. The primary objective is to simulate the mechanism's motion and analyze the velocity profile of the needle bar (slider) relative to a constant rotary input. This analysis is critical for understanding the precise timing required for stitch formation, specifically loop-taking and dwell phases.
+## 📌 Overview
+This project presents a computational kinematic analysis of a **6-bar linkage mechanism** utilized in industrial sewing machine needle bar drives. The primary objective is to simulate the mechanism's motion and analyze the velocity profile of the needle bar (slider) relative to a constant rotary input.
 
-## Mechanism Description
-The system operates as a **function generator**, converting uniform rotary input from the main shaft (Link 5) into a specific non-uniform reciprocating linear motion at the output slider (Needle Bar). The topology consists of:
-* **Input:** Rotating crank driven at constant velocity.
+The simulation uses **MATLAB** to solve vector loop equations and generate precise velocity profiles required for stitch timing (loop-taking and dwell phases).
+
+## ⚙️ Mechanism Description
+The system operates as a **function generator**, converting uniform rotary input into a specific reciprocating linear motion.
+* **Input:** Rotating crank driven at constant velocity (Link 5).
 * **Transmission:** A central 4-bar linkage loop ($O_5-C-A-O_2$) transmitting motion to a ternary link.
-* **Output:** A connecting rod driving the vertical slider (Needle).
+* **Output:** A connecting rod driving the vertical slider (Needle Bar).
 
-## Methodology
-The simulation is implemented in **MATLAB** using the **Symbolic Math Toolbox** to ensure analytical exactness rather than relying solely on numerical approximations.
+## 🧮 Methodology
+The analysis avoids approximate numerical differentiation by using **Symbolic Math**:
 
-1.  **Position Analysis:**
-    The mechanism is defined by vector loop closure equations. The system solves for unknown joint angles ($\theta_2, \theta_3$) as a function of the driver angle ($\theta_4$) using symbolic solvers to handle non-linear geometric constraints.
+1.  **Position Analysis:** Solves non-linear vector loop closure equations:
+    $$\vec{R}_{O2} + \vec{R}_{A} = \vec{R}_{O5} + \vec{R}_{C} + \vec{R}_{CA}$$
+    
+2.  **Velocity Analysis:** Derives exact velocity vectors using the Chain Rule:
+    $$V_{slider} = \frac{d(D_y)}{dt} = \frac{d(D_y)}{d\theta_{in}} \cdot \omega_{in}$$
 
-2.  **Velocity Analysis:**
-    Velocity equations are derived via **exact symbolic differentiation** with respect to time. By applying the chain rule ($\frac{dx}{dt} = \frac{dx}{d\theta} \cdot \omega$), the code calculates the instantaneous linear velocity of the slider without finite difference errors.
+## 📊 Results (Preview)
+*(Upload your graph image and replace the link below)*
+![Velocity Graph](https://via.placeholder.com/800x400?text=Upload+Your+Velocity+Graph+Here)
 
-## Key Results
-The output includes a dynamic animation of the linkage and a velocity profile graph. The analysis reveals the mechanism's inherent **asymmetric velocity characteristics**, highlighting the "quick-return" motion and the specific deceleration near the Bottom Dead Center (BDC), which allows the rotary hook to engage the thread loop effectively.
+> The graph demonstrates the **asymmetric velocity profile**, highlighting the quick-return motion essential for high-speed sewing operations.
 
-## Usage
-* **Requirements:** MATLAB with Symbolic Math Toolbox.
-* **Execution:** Run the main script. The program will solve the symbolic equations, generate the pathing data, and display the velocity plots and animation.
+## 🚀 Usage
+1.  Clone the repository.
+2.  Open the main script in MATLAB (R2020b or later recommended).
+3.  Run the script to visualize the animation and generate plots.
+
+---
+*Project by [Yuth Kanjanaprayut/6630276621]*
