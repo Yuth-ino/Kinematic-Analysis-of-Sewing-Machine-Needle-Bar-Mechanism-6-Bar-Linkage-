@@ -16,15 +16,23 @@ The system operates as a **function generator**, converting uniform rotary input
 ## 🧮 Methodology
 The analysis avoids approximate numerical differentiation by using **Symbolic Math**:
 
-1.  **Position Analysis:** Solves non-linear vector loop closure equations:
-    $$\vec{R}_{O2} + \vec{R}_{A} = \vec{R}_{O5} + \vec{R}_{C} + \vec{R}_{CA}$$
-    
-2.  **Velocity Analysis:** Derives exact velocity vectors using the Chain Rule:
-    $$V_{slider} = \frac{d(D_y)}{dt} = \frac{d(D_y)}{d\theta_{in}} \cdot \omega_{in}$$
+**1. Position Analysis**
+Solves non-linear vector loop closure equations:
+<div align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;\vec{R}_{O2}+\vec{R}_{A}=\vec{R}_{O5}+\vec{R}_{C}+\vec{R}_{CA}" />
+</div>
+<br>
+
+**2. Velocity Analysis**
+Derives exact velocity vectors using the Chain Rule:
+<div align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{slider}=\frac{d(D_y)}{dt}=\frac{d(D_y)}{d\theta_{in}}\cdot\omega_{in}" />
+</div>
 
 ## 📊 Results (Preview)
-*(Upload your graph image and replace the link below)*
-![Velocity Graph](https://via.placeholder.com/800x400?text=Upload+Your+Velocity+Graph+Here)
+
+![Velocity Graph](<img width="351" height="215" alt="image" src="https://github.com/user-attachments/assets/1e6e5121-b5c3-401a-902c-1c0c78ecaec6" />
+)
 
 > The graph demonstrates the **asymmetric velocity profile**, highlighting the quick-return motion essential for high-speed sewing operations.
 
