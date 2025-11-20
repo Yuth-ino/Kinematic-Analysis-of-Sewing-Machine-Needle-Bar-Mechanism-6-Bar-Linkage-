@@ -32,7 +32,7 @@ Derives exact velocity vectors using the Chain Rule:
 ## 📊 Results (Preview)
 
 <div align="center">
-  <img src="velocity_graph.png" width="80%" />
+  <img src="sliderDvelo.PNG" width="80%" />
   <p><em>Figure 1: Velocity Profile of the Needle Bar (Slider)</em></p>
 </div>
 
@@ -43,5 +43,45 @@ Derives exact velocity vectors using the Chain Rule:
 2.  Open the main script in MATLAB (R2020b or later recommended).
 3.  Run the script to visualize the animation and generate plots.
 
+## 💻 Key Code Highlights
+
+This project leverages MATLAB's **Symbolic Math Toolbox** to perform exact kinematic analysis. Instead of relying on approximate numerical methods, we derive the equations analytically.
+
+**1. Solving Vector Loop Equations (Position Analysis)**
+Here, we define the geometric constraints of the 6-bar linkage and solve for the unknown joint angles ($\theta_2, \theta_3$).
+
+```matlab
+% Define Symbolic Variables
+theta2 = sym('theta_2');
+theta3 = sym('theta_3');
+theta4 = sym('theta_4'); % Input Driver Angle
+
+% Define Vector Loop Equations (O2 -> A -> C -> O5)
+eq1 = Ax == Cx + l3*cos(theta3);
+eq2 = Ay == Cy + l3*sin(theta3);
+
+% Solve the non-linear system symbolically
+sol = solve([eq1 eq2], [theta2 theta3]);
+
+% Select Assembly Mode 2
+theta2_sol = sol.theta_2(2);
+theta3_sol = sol.theta_3(2);
+```
+
+**2. Exact Velocity Derivation**
+Using the Chain Rule, we calculate the instantaneous velocity of the needle bar (slider). This provides a smooth, continuous velocity profile without quantization errors
+```matlab
+% Define Input Speed
+omega_driver = 1; % rad/s
+
+% Calculate Angular Velocities (d_theta/dt)
+omega2_sym = diff(theta2_sol, theta4) * omega_driver;
+omega3_sym = diff(theta3_sol, theta4) * omega_driver;
+
+% Calculate Linear Velocity of the Needle Bar (Slider D)
+% V = d(Position)/dt
+VDy_sym = diff(Dy, theta4) * omega_driver;
+```
+[**📄 View Full Source Code**](Project_Simbolic.mlx)
 ---
 *Project by [Yuth Kanjanaprayut/6630276621]*
