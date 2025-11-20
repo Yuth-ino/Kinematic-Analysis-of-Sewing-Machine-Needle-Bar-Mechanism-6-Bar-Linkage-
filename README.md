@@ -82,6 +82,6 @@ omega3_sym = diff(theta3_sol, theta4) * omega_driver;
 % V = d(Position)/dt
 VDy_sym = diff(Dy, theta4) * omega_driver;
 ```
-[**📄 View Full Source Code**](Project_Simbolic.mlx)
+[**📄 View Full Source Code**](needle_bar_position_and_velocity.mlx)
 ---
 *Project by [Yuth Kanjanaprayut/6630276621]*
