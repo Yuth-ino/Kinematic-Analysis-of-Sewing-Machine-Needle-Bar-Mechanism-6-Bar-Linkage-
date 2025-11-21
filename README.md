@@ -330,6 +330,8 @@ fprintf('Max Needle Velocity: %.2f mm/s\n', max(vD_vals));
 
 </details>
 
+### [👉 Click Here to View `Needle_Bar_Full_Code.mlx`](Needle_Bar_Full_Code.mlx)
+
 ---
 
 ## 🙏 Acknowledgments
