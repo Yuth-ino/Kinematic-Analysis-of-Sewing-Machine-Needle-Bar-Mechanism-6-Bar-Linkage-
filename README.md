@@ -32,7 +32,7 @@ Derives exact velocity vectors using the Chain Rule:
 ## 📊 Results (Preview)
 
 <div align="center">
-  <img src="sliderDvelo.PNG" width="80%" />
+  <img src="sliderDvelo.PNG" width="40%" />
   <p><em>Figure 1: Velocity Profile of the Needle Bar (Slider)</em></p>
 </div>
 
