@@ -31,10 +31,25 @@ Derives exact velocity vectors using the Chain Rule:
 
 ## 📊 Results (Preview)
 
+
+
+<div align="center">
+  <img src="sliderDposi.PNG" width="40%" />
+  <p><em>Figure 1: Position Profile of the Needle Bar (Slider)</em></p>
+</div>
+
 <div align="center">
   <img src="sliderDvelo.PNG" width="40%" />
-  <p><em>Figure 1: Velocity Profile of the Needle Bar (Slider)</em></p>
+  <p><em>Figure 2: Velocity Profile of the Needle Bar (Slider)</em></p>
 </div>
+
+The simulation results highlight two key characteristics:
+
+1. **Position Profile:** Confirms that the needle bar operates smoothly within the required stroke length, ensuring continuous motion without mechanical locking.
+2. **Velocity Profile:** Displays an **asymmetric profile** (unlike simple harmonic motion), which is specifically optimized for the **Loop-Taking phase** to ensure precise timing for the rotary hook to engage the thread.
+
+> **⚠️ Note on Graph Artifact:**
+> You may observe a momentary spike in the velocity graph. This is a **computational artifact** caused by the symbolic solver switching between solution branches (mathematical branch cut) at specific angles. It **does not** represent a physical mechanical jerk, as the actual mechanism's motion is continuous.
 
 ## 🚀 Usage
 1.  Clone the repository.
