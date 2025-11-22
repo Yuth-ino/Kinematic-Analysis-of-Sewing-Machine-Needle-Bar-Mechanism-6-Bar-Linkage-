@@ -9,7 +9,9 @@ The simulation uses **MATLAB** to solve vector loop equations and generate preci
 
 ## ⚙️ Mechanism Description
 
-![Needle_bar_vid-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3acde6f9-3c9a-49aa-86a8-62dc1358aa1f)
+<div align="center">
+  <img src="Needle_bar_gif.gif" width="80%" />
+</div>
 
 The system operates as a **function generator**, converting uniform rotary input into a specific reciprocating linear motion.
 * **Input:** Rotating crank driven at constant velocity (Link 5).
