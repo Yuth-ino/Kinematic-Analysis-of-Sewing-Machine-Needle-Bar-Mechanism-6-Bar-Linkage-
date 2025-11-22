@@ -8,6 +8,9 @@ This project presents a computational kinematic analysis of a **6-bar linkage me
 The simulation uses **MATLAB** to solve vector loop equations and generate precise velocity profiles required for stitch timing (loop-taking and dwell phases).
 
 ## ⚙️ Mechanism Description
+
+![Needle_bar_vid-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3acde6f9-3c9a-49aa-86a8-62dc1358aa1f)
+
 The system operates as a **function generator**, converting uniform rotary input into a specific reciprocating linear motion.
 * **Input:** Rotating crank driven at constant velocity (Link 5).
 * **Transmission:** A central 4-bar linkage loop ($O_5-C-A-O_2$) transmitting motion to a ternary link.
